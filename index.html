@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Source - Web Developer Tools</title>
+
+  <!-- Meta Tags -->
+  <meta name="description" content="View-source is a web-based tool that lets you view the raw HTML, CSS, and JavaScript code of any web page easily.">
+  <meta name="keywords" content="view source, HTML viewer, CSS viewer, JavaScript viewer, developer tools, web tools">
+  <meta name="author" content="Rekt Developer">
+  <meta property="og:title" content="View Source - Web Developer Tools">
+  <meta property="og:description" content="View the raw source code of any webpage online with advanced features.">
+  <meta property="og:url" content="https://rekt-developer.github.io/view-source/">
+  <meta property="og:image" content="https://rekt-developer.github.io/view-source/assets/favicon.ico">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Highlight.js for Syntax Highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai.min.css">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <h1>View Source</h1>
+    <p>View the raw HTML, CSS, and JavaScript code of any webpage on the internet.</p>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>About View Source</h2>
+      <p>
+        <strong>What’s it do?</strong><br>
+        View the source of any web page on the internet.
+      </p>
+      <p>
+        <strong>Why does this exist?</strong><br>
+        Not everyone wants to fiddle with mobile developer settings to view a page’s source. This web page makes it easy to do from anywhere.
+      </p>
+      <p>
+        <strong>Can I help?</strong><br>
+        Sure, you can email <a href="mailto:viewsource@likhon.xyz">viewsource@likhon.xyz</a> or reach out on <a href="https://t.me/RektDevelopers" target="_blank">Telegram</a> if you have any suggestions. Thanks!
+      </p>
+    </section>
+
+    <section class="fetch-source">
+      <h2>Fetch and View Source</h2>
+      <form id="sourceForm">
+        <label for="url">Enter URL:</label>
+        <input type="url" id="url" name="url" placeholder="https://example.com" required>
+        <button type="submit">Fetch Source</button>
+      </form>
+
+      <div id="result" class="result">
+        <pre><code id="sourceCode" class="html"></code></pre>
+        <button id="copyBtn" class="copy-btn"><i class="fas fa-copy"></i> Copy</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Powered by <a href="https://t.me/RektDevelopers" target="_blank">Rekt Developers</a></p>
+    <div class="social-icons">
+      <a href="https://t.me/RektDevelopers" target="_blank"><i class="fab fa-telegram"></i></a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
