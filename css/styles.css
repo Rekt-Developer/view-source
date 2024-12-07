@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 :root {
-    --bg-color: #222;
-    --text-color: #ccc;
-    --accent-color: #f08d49;
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --accent-color: #61dafb;
     --link-color: #7ec699;
     --border-color: #444;
+    --tab-active-color: #2c2c2c;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
     padding: 0;
     color: var(--text-color);
     background: var(--bg-color);
-    font-family: 'Fira Code', monospace;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.6;
 }
@@ -22,8 +23,38 @@ body {
     box-sizing: border-box;
 }
 
-h1 {
-    display: inline;
+header {
+    background-color: var(--tab-active-color);
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+h1, h2 {
     color: var(--accent-color);
     font-weight: 600;
 }
@@ -41,15 +72,10 @@ small {
     color: #999;
 }
 
-header, footer {
-    margin: 1em;
-    text-align: center;
-}
-
 main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1em;
+    padding: 2em 1em;
 }
 
 .group {
@@ -88,13 +114,14 @@ button {
     border: none;
     border-radius: 0 4px 4px 0;
     cursor: pointer;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Roboto', sans-serif;
     font-size: 1em;
+    font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #e07d39;
+    background-color: #4fa8d5;
 }
 
 input:focus,
@@ -102,7 +129,7 @@ select:focus,
 textarea:focus,
 button:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(240, 141, 73, 0.5);
+    box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.5);
 }
 
 a:link,
@@ -117,12 +144,53 @@ a:hover {
     text-decoration: underline;
 }
 
+#language-tabs {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.tab {
+    padding: 0.5em 1em;
+    background-color: var(--border-color);
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tab.active {
+    background-color: var(--tab-active-color);
+}
+
 #source {
-    background-color: #2d2d2d;
+    background-color: var(--tab-active-color);
     border-radius: 4px;
     padding: 1em;
     overflow: auto;
     max-height: 600px;
+    font-family: 'Fira Code', monospace;
+}
+
+footer {
+    background-color: var(--tab-active-color);
+    padding: 1em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.social-links {
+    margin-top: 1em;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5em;
+    margin: 0 0.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
@@ -137,6 +205,15 @@ a:hover {
         border-radius: 4px;
         margin-bottom: 1em;
     }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
 }
 
 /* Animation for improved time on site */
@@ -147,5 +224,75 @@ a:hover {
 
 #output-section {
     animation: fadeIn 0.5s ease-in-out;
+}
+
+/* GitHub-like syntax highlighting colors */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #8e908c;
+}
+
+.token.punctuation {
+    color: #c5c8c6;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol {
+    color: #81a2be;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,.token.builtin,
+.token.inserted {
+    color: #b5bd68;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #8abeb7;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #f0c674;
+}
+
+.token.function {
+    color: #de935f;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #cc6666;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+.token.deleted {
+    color: #cc6666;
 }
 
