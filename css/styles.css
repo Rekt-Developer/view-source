@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-color: #222;
+    --text-color: #ccc;
+    --accent-color: #f08d49;
+    --link-color: #7ec699;
+    --border-color: #444;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background: var(--bg-color);
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    display: inline;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+h1 a:link,
+h1 a:visited,
+h1 a:hover,
+h1 a:active {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+small {
+    font-size: 80%;
+    color: #999;
+}
+
+header, footer {
+    margin: 1em;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 2em;
+}
+
+form label {
+    flex: none;
+    display: block;
+    padding-right: .5em;
+    margin: 0;
+    line-height: 1.5em;
+}
+
+form input {
+    flex: 1 1 auto;
+    display: block;
+    margin: 0;
+    padding: .5em 1em;
+    outline-width: 0;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Fira Code', monospace;
+    font-size: 1em;
+}
+
+button {
+    padding: .5em 1em;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-family: 'Fira Code', monospace;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e07d39;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(240, 141, 73, 0.5);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#source {
+    background-color: #2d2d2d;
+    border-radius: 4px;
+    padding: 1em;
+    overflow: auto;
+    max-height: 600px;
+}
+
+@media (max-width: 768px) {
+    .group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form input,
+    button {
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 1em;
+    }
+}
+
+/* Animation for improved time on site */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#output-section {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
