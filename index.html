@@ -3,29 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Source - Explore Web Page Code</title>
-    <meta name="description" content="View Source is a powerful web-based tool that allows you to easily view and analyze the raw HTML, CSS, and JavaScript code of any webpage. Perfect for developers, designers, and SEO specialists.">
+    <title>Advanced View Source - Explore Web Page Code</title>
+    <meta name="description" content="Advanced View Source is a cutting-edge web-based tool for viewing and analyzing HTML, CSS, and JavaScript code of any webpage. Perfect for developers, designers, and SEO specialists.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/line-numbers/prism-line-numbers.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rekt-developer.github.io/view-source/">
-    <meta property="og:title" content="View Source - Explore Web Page Code">
-    <meta property="og:description" content="Easily view and analyze the raw HTML, CSS, and JavaScript code of any webpage with our powerful web-based tool.">
-    <meta property="og:image" content="https://rekt-developer.github.io/view-source/images/view-source-og.png">
+    <meta property="og:url" content="https://view-source-codes.vercel.app/">
+    <meta property="og:title" content="Advanced View Source - Explore Web Page Code">
+    <meta property="og:description" content="Cutting-edge tool for viewing and analyzing HTML, CSS, and JavaScript code of any webpage. Perfect for developers, designers, and SEO specialists.">
+    <meta property="og:image" content="https://view-source-codes.vercel.app/images/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://rekt-developer.github.io/view-source/">
-    <meta property="twitter:title" content="View Source - Explore Web Page Code">
-    <meta property="twitter:description" content="Easily view and analyze the raw HTML, CSS, and JavaScript code of any webpage with our powerful web-based tool.">
-    <meta property="twitter:image" content="https://rekt-developer.github.io/view-source/images/view-source-og.png">
+    <meta property="twitter:url" content="https://view-source-codes.vercel.app/">
+    <meta property="twitter:title" content="Advanced View Source - Explore Web Page Code">
+    <meta property="twitter:description" content="Cutting-edge tool for viewing and analyzing HTML, CSS, and JavaScript code of any webpage. Perfect for developers, designers, and SEO specialists.">
+    <meta property="twitter:image" content="https://view-source-codes.vercel.app/images/twitter-image.png">
 
     <!-- SEO -->
-    <meta name="keywords" content="view source, web development tool, HTML viewer, CSS analyzer, JavaScript inspector, code exploration, web page analysis, developer tools, SEO analysis, 2023 web development">
-    <link rel="canonical" href="https://rekt-developer.github.io/view-source/">
+    <meta name="keywords" content="view source, web development tool, HTML viewer, CSS analyzer, JavaScript inspector, code exploration, web page analysis, developer tools, SEO analysis, 2023 web development, code highlighter">
+    <link rel="canonical" href="https://view-source-codes.vercel.app/">
     <meta name="robots" content="index, follow">
     
     <!-- Structured Data -->
@@ -33,9 +41,9 @@
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      "name": "View Source",
-      "url": "https://rekt-developer.github.io/view-source/",
-      "description": "A powerful web-based tool for viewing and analyzing the raw HTML, CSS, and JavaScript code of any webpage.",
+      "name": "Advanced View Source",
+      "url": "https://view-source-codes.vercel.app/",
+      "description": "A cutting-edge web-based tool for viewing and analyzing the raw HTML, CSS, and JavaScript code of any webpage.",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Any",
       "offers": {
@@ -47,32 +55,95 @@
         "@type": "Organization",
         "name": "Rekt Developers",
         "url": "https://github.com/Rekt-Developer"
-      }
+      },
+      "datePublished": "2023-06-01",
+      "dateModified": "2023-06-15",
+      "sameAs": [
+        "https://github.com/Rekt-Developer/view-source",
+        "https://t.me/RektDevelopers"
+      ]
     }
     </script>
 </head>
 <body>
     <header>
-        <h1><a href="/">View Source</a></h1>
-        <p><small>Powered by <a href="https://github.com/Rekt-Developer" target="_blank" rel="noopener">Rekt Developers</a></small></p>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-to-use">How to Use</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
+        <section id="home">
+            <h1><a href="/">Advanced View Source</a></h1>
+            <p><small>Powered by <a href="https://github.com/Rekt-Developer" target="_blank" rel="noopener">Rekt Developers</a></small></p>
+        </section>
+
         <section id="input-section">
             <form id="url-form" class="group">
-                <label for="url">URL:</label>
-                <input type="url" id="url" name="url" placeholder="https://example.com" required>
+                <label for="url">Enter URL:</label>
+                <input type="url" id="url" name="url" placeholder="https://example.com" required aria-label="Enter URL to view source">
                 <button type="submit">View Source</button>
             </form>
         </section>
 
         <section id="output-section">
+            <div id="language-tabs">
+                <button class="tab active" data-language="html">HTML</button>
+                <button class="tab" data-language="css">CSS</button>
+                <button class="tab" data-language="js">JavaScript</button>
+            </div>
             <pre id="source" class="line-numbers"><code class="language-html"></code></pre>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>View HTML, CSS, and JavaScript separately</li>
+                <li>Syntax highlighting for easy readability</li>
+                <li>Line numbers for precise code referencing</li>
+                <li>Responsive design for all devices</li>
+                <li>Copy code with a single click</li>
+            </ul>
+        </section>
+
+        <section id="how-to-use">
+            <h2>How to Use</h2>
+            <ol>
+                <li>Enter the URL of the webpage you want to analyze</li>
+                <li>Click "View Source" to fetch the code</li>
+                <li>Use the language tabs to switch between HTML, CSS, and JavaScript</li>
+                <li>Explore the highlighted code with line numbers</li>
+                <li>Copy the code using the copy button</li>
+            </ol>
+        </section>
+
+        <section id="people-also-ask">
+            <h2>People Also Ask</h2>
+            <!-- Dynamically populated by JavaScript -->
+        </section>
+
+        <section id="about">
+            <h2>About Advanced View Source</h2>
+            <p>Advanced View Source is a cutting-edge tool designed for web developers, designers, and SEO specialists. It provides an easy way to view and analyze the source code of any webpage, helping you understand web structures, learn from others, and optimize your own projects.</p>
+        </section>
+
+        <section id="comments">
+            <h2>Comments</h2>
+            <div id="disqus_thread"></div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 View Source. All rights reserved. | <a href="https://t.me/RektDevelopers" target="_blank" rel="noopener">Contact Us</a></p>
+        <p>&copy; 2023 Advanced View Source. All rights reserved. | <a href="https://t.me/RektDevelopers" target="_blank" rel="noopener">Contact Us</a></p>
+        <div class="social-links">
+            <a href="https://github.com/Rekt-Developer/view-source" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://t.me/RektDevelopers" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
@@ -81,4 +152,3 @@
     <script src="js/main.js"></script>
 </body>
 </html>
-
